@@ -12,13 +12,10 @@ export function Footer() {
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="relative w-24 h-24 mb-6 rounded-full overflow-hidden border border-primary/20">
-              <Image
-                src="/logo-gold.png"
-                alt="Basha Cafe Logo"
-                fill
-                className="object-cover"
-              />
+            <div className="inline-block p-4 mb-6 rounded-full border border-primary/20 bg-card">
+              <span className="text-primary font-serif font-bold text-xl tracking-tighter italic">
+                Basha <span className="text-foreground">Cafe</span>
+              </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Where flavor meets the lounge experience. Premium hookah, exquisite cuisine,

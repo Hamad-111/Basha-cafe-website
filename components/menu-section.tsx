@@ -171,54 +171,6 @@ export function MenuSection() {
             </div>
           ))}
         </div>
-
-        {/* Menu Images */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-          <div className="aspect-square relative overflow-hidden group">
-            <Image
-              src="/images/food-family-deal.jpg"
-              alt="Signature dishes"
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-background/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-primary text-sm tracking-wider uppercase">Main Courses</span>
-            </div>
-          </div>
-          <div className="aspect-square relative overflow-hidden group">
-            <Image
-              src="/images/premium-hookah.jpg"
-              alt="Premium hookah"
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-background/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-primary text-sm tracking-wider uppercase">Shisha</span>
-            </div>
-          </div>
-          <div className="aspect-square relative overflow-hidden group">
-            <Image
-              src="/images/dessert.jpg"
-              alt="Desserts"
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-background/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-primary text-sm tracking-wider uppercase">Desserts</span>
-            </div>
-          </div>
-          <div className="aspect-square relative overflow-hidden group">
-            <Image
-              src="/images/drinks.jpg"
-              alt="Beverages"
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-background/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-primary text-sm tracking-wider uppercase">Beverages</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

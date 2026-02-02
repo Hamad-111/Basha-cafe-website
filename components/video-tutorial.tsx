@@ -40,7 +40,6 @@ export function VideoTutorial() {
                         <video
                             ref={videoRef}
                             className="w-full h-full object-cover"
-                            poster="/images/video-thumbnail.jpg"
                             onClick={togglePlay}
                             onPlay={() => setIsPlaying(true)}
                             onPause={() => setIsPlaying(false)}

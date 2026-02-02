@@ -37,24 +37,9 @@ export function About() {
           <div className="w-24 h-px bg-primary mx-auto" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
-          <div className="relative">
-            <div className="aspect-[4/5] relative overflow-hidden">
-              <Image
-                src="/images/about-hero.jpg"
-                alt="Basha Cafe Islamabad"
-                fill
-                className="object-cover"
-              />
-            </div>
-            {/* Decorative frame */}
-            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary/30 -z-10" />
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/20 -z-10" />
-          </div>
-
+        <div className="grid lg:grid-cols-1 gap-16 items-center max-w-3xl mx-auto">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 text-center">
             <p className="text-xl text-foreground font-sans leading-relaxed">
               Welcome to Basha Cafe, a premium sanctuary for those who appreciate the finer things.
             </p>

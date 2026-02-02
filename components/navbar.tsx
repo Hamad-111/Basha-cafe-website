@@ -37,14 +37,10 @@ export function Navbar() {
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-primary/20 translate-y-2 md:translate-y-6 shadow-xl">
-              <Image
-                src="/logo-gold.png"
-                alt="Basha Cafe Logo"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div className="flex items-center justify-center p-2 rounded-full border-2 border-primary/20 translate-y-2 md:translate-y-6 shadow-xl bg-background">
+              <span className="text-primary font-serif font-bold text-xl md:text-2xl tracking-tighter italic">
+                Basha <span className="text-foreground">Cafe</span>
+              </span>
             </div>
           </Link>
 

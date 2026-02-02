@@ -20,23 +20,6 @@ export const metadata: Metadata = {
   title: 'Basha Cafe & Restaurant | Best in Town',
   description: 'Experience the finest hookah and dining at Basha Cafe. Premium shisha flavors, delicious cuisine, and a luxurious lounge atmosphere. Relax. Dine. Unwind.',
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export default function RootLayout({
