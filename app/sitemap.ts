@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://bashacafe.com" // Replace with your actual domain when you know it
+    const baseUrl = "https://bashcafecafe.online"
 
     return [
         {
