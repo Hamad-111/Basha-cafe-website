@@ -17,8 +17,18 @@ const _inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Basha Cafe & Restaurant | Best in Town',
-  description: 'Experience the finest hookah and dining at Basha Cafe. Premium shisha flavors, delicious cuisine, and a luxurious lounge atmosphere. Relax. Dine. Unwind.',
+  title: 'Basha Cafe & Restaurant | Best Hookah Lounge & Cafe Near Me',
+  description: 'Looking for a hookah lounge near me? Experience the finest shisha, delicious cuisine, and a luxurious lounge atmosphere at Basha Cafe. Open late daily.',
+  keywords: [
+    "hookah lounge near me",
+    "best shisha in town",
+    "cafe near me",
+    "tea and coffee shop",
+    "late night food",
+    "shisha lounge",
+    "hookah bar",
+    "basha cafe"
+  ],
   generator: 'v0.app',
 }
 
