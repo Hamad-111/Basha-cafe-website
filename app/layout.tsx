@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: 'Basha Cafe & Restaurant | Best Hookah Lounge & Cafe Near Me',
   description: 'Looking for a hookah lounge near me? Experience the finest shisha, delicious cuisine, and a luxurious lounge atmosphere at Basha Cafe. Open late daily.',
   keywords: [
+    "best cafe in islamabad",
+    "top sheesha cafe in islamabad",
+    "sheesha cafe in islamabad",
     "hookah lounge near me",
     "best shisha in town",
     "cafe near me",
