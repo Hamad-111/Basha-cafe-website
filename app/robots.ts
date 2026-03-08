@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: "*",
             allow: "/",
         },
-        sitemap: "https://bashcafecafe.online/sitemap.xml", // Replace with your actual domain when you know it
+        sitemap: "https://www.bashacafe.com/sitemap.xml",
     }
 }

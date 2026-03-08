@@ -17,6 +17,7 @@ const _inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.bashacafe.com'),
   title: 'Basha Cafe | Top Restaurant & Sheesha Cafe in Islamabad',
   description: 'Experience the ultimate dining and lounge atmosphere at Basha Cafe, the top restaurant and sheesha cafe in Islamabad. Enjoy premium shisha, late-night food, and the best cafe vibes in the city.',
   keywords: [
@@ -36,6 +37,28 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   verification: {
     google: "googleab0248803456ad93",
+  },
+  openGraph: {
+    title: 'Basha Cafe | Top Restaurant & Sheesha Cafe in Islamabad',
+    description: 'Experience the ultimate dining and lounge atmosphere at Basha Cafe. Premium shisha, late-night food, and the best vibrations in Islamabad.',
+    url: 'https://www.bashacafe.com',
+    siteName: 'Basha Cafe',
+    images: [
+      {
+        url: '/images/hero-bg.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Basha Cafe Interior',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Basha Cafe | Top Restaurant & Sheesha Cafe in Islamabad',
+    description: 'Experience the ultimate dining and lounge atmosphere at Basha Cafe. Premium shisha, late-night food, and the best vibrations in Islamabad.',
+    images: ['/images/hero-bg.jpg'],
   },
 }
 
