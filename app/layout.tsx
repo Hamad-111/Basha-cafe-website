@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "basha cafe"
   ],
   generator: 'v0.app',
+  verification: {
+    google: "googleab0248803456ad93",
+  },
 }
 
 export default function RootLayout({
