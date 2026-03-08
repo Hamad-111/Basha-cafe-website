@@ -7,11 +7,11 @@ import { X, Download } from "lucide-react"
 export function MenuSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
-  const menuImages = [
-    { src: "/menu-1.jpeg", delay: "0" },
-    { src: "/menu-2.jpeg", delay: "100" },
-    { src: "/menu-3.jpeg", delay: "200" },
-    { src: "/menu-4.jpeg", delay: "300" }
+  const menuImages: { src: string; delay: string }[] = [
+    // { src: "/menu-1.jpeg", delay: "0" },
+    // { src: "/menu-2.jpeg", delay: "100" },
+    // { src: "/menu-3.jpeg", delay: "200" },
+    // { src: "/menu-4.jpeg", delay: "300" }
   ];
 
   return (
@@ -30,9 +30,22 @@ export function MenuSection() {
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
           <p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto">
             Discover a culinary journey crafted perfectly to satisfy your cravings.
-            Click on any menu page to view it in full detail and download.
+            (Digital menu coming soon)
           </p>
         </div>
+
+        {/* Coming Soon Placeholder */}
+        {menuImages.length === 0 && (
+          <div className="flex flex-col items-center justify-center py-20 border border-dashed border-primary/20 rounded-2xl bg-card transition-all hover:bg-card/80">
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+              <span className="text-2xl">✨</span>
+            </div>
+            <p className="text-2xl font-sans font-medium text-foreground mb-2">Menu Coming Soon</p>
+            <p className="text-muted-foreground text-center max-w-sm px-6">
+              We're currently updating our digital menu with our latest seasonal offerings.
+            </p>
+          </div>
+        )}
 
         {/* Dynamic Image Presentation (Row Layout) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">

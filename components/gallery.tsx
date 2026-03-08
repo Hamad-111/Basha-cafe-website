@@ -1,17 +1,17 @@
 "use client"
 import Image from "next/image"
 
-const galleryCategories = [
-  { alt: "Night Atmosphere", src: "/images/memories/rooftop-night.jpg" },
-  { alt: "Live Music", src: "/images/memories/live-music-table.jpg" },
-  { alt: "Birthday Celebrations", src: "/images/memories/birthday-setup.jpg" },
-  { alt: "Friends & Cake", src: "/images/memories/celebration-cake.jpg" },
-  { alt: "Iconic Views", src: "/images/memories/rooftop-view-text.jpg" },
-  { alt: "Music Vibes", src: "/images/memories/music-closeup.jpg" },
-  { alt: "Scenic Terrace", src: "/images/memories/terrace-flowers.jpg" },
-  { alt: "Fun at the Bar", src: "/images/memories/bar-masks.jpg" },
-  { alt: "Tower View", src: "/images/memories/tower-view.jpg" },
-  { alt: "The Lounge Experience", src: "/images/hero-bg.jpg" },
+const galleryCategories: { alt: string; src: string }[] = [
+  // { alt: "Night Atmosphere", src: "/images/memories/rooftop-night.jpg" },
+  // { alt: "Live Music", src: "/images/memories/live-music-table.jpg" },
+  // { alt: "Birthday Celebrations", src: "/images/memories/birthday-setup.jpg" },
+  // { alt: "Friends & Cake", src: "/images/memories/celebration-cake.jpg" },
+  // { alt: "Iconic Views", src: "/images/memories/rooftop-view-text.jpg" },
+  // { alt: "Music Vibes", src: "/images/memories/music-closeup.jpg" },
+  // { alt: "Scenic Terrace", src: "/images/memories/terrace-flowers.jpg" },
+  // { alt: "Fun at the Bar", src: "/images/memories/bar-masks.jpg" },
+  // { alt: "Tower View", src: "/images/memories/tower-view.jpg" },
+  // { alt: "The Lounge Experience", src: "/images/hero-bg.jpg" },
 ]
 
 export function Gallery() {

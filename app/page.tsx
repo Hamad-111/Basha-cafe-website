@@ -17,9 +17,9 @@ export default function Home() {
       <About />
       <MenuSection />
       <Gallery />
-      <Testimonials />
-      <VideoTutorial />
-      <GuestReviews />
+      {/* <Testimonials /> */}
+      {/* <VideoTutorial /> */}
+      {/* <GuestReviews /> */}
       <Reservations />
       <Footer />
     </main>
