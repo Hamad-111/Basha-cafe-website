@@ -1,11 +1,28 @@
 "use client"
 
-import { Play, Quote } from "lucide-react"
+import { Play, Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useRef } from "react"
 
 export function GuestReviews() {
     const [isPlaying, setIsPlaying] = useState(false)
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
     const videoRef = useRef<HTMLVideoElement>(null)
+
+    const videos = [
+        "/video 1.mp4",
+        "/video 2.mp4",
+        "/video 3.mp4"
+    ]
+
+    const handleNext = () => {
+        setIsPlaying(false)
+        setCurrentVideoIndex((prev) => (prev + 1) % videos.length)
+    }
+
+    const handlePrev = () => {
+        setIsPlaying(false)
+        setCurrentVideoIndex((prev) => (prev - 1 + videos.length) % videos.length)
+    }
 
     const togglePlay = () => {
         if (videoRef.current) {
@@ -30,19 +47,20 @@ export function GuestReviews() {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-                    {/* Video Review */}
+                    {/* Video Review Carousel */}
                     <div className="relative group">
                         <div className="absolute -inset-4 border border-primary/10 -z-10 rounded-xl group-hover:border-primary/30 transition-colors duration-500" />
 
                         <div className="relative aspect-[9/16] max-w-[320px] mx-auto bg-black/40 overflow-hidden shadow-2xl border border-primary/20 rounded-lg">
                             <video
+                                key={videos[currentVideoIndex]} // Force re-render on source change
                                 ref={videoRef}
                                 className="w-full h-full object-cover"
                                 onClick={togglePlay}
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
                             >
-                                <source src="/videos/reviews/customer-review.mp4" type="video/mp4" />
+                                <source src={videos[currentVideoIndex]} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
@@ -56,12 +74,28 @@ export function GuestReviews() {
                                     </div>
                                 </div>
                             )}
+
+                            {/* Carousel Controls */}
+                            <button
+                                onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+                                className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/60 hover:bg-background/90 text-primary flex items-center justify-center transition-colors"
+                                aria-label="Previous video"
+                            >
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
+                            <button
+                                onClick={(e) => { e.stopPropagation(); handleNext(); }}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/60 hover:bg-background/90 text-primary flex items-center justify-center transition-colors"
+                                aria-label="Next video"
+                            >
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
                         </div>
 
                         {/* Decorative Label */}
-                        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-background border border-primary/30 px-6 py-2 rounded-full shadow-lg z-20">
+                        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-background border border-primary/30 px-6 py-2 rounded-full shadow-lg z-20 whitespace-nowrap">
                             <span className="text-primary text-xs font-sans font-bold tracking-widest uppercase flex items-center gap-2">
-                                <Play className="w-3 h-3 fill-primary" /> Live Review
+                                <Play className="w-3 h-3 fill-primary" /> Review {currentVideoIndex + 1} of {videos.length}
                             </span>
                         </div>
                     </div>
