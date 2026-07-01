@@ -8,10 +8,10 @@ export function MenuSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const menuImages: { src: string; delay: string }[] = [
-    // { src: "/menu-1.jpeg", delay: "0" },
-    // { src: "/menu-2.jpeg", delay: "100" },
-    // { src: "/menu-3.jpeg", delay: "200" },
-    // { src: "/menu-4.jpeg", delay: "300" }
+    { src: "/menu-1.jpg", delay: "0" },
+    { src: "/menu-2.jpg", delay: "100" },
+    { src: "/menu-3.jpg", delay: "200" },
+    { src: "/menu-4.jpg", delay: "300" }
   ];
 
   return (
@@ -29,8 +29,7 @@ export function MenuSection() {
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
           <p className="text-lg text-muted-foreground font-sans max-w-2xl mx-auto">
-            Discover a culinary journey crafted perfectly to satisfy your cravings.
-            (Digital menu coming soon)
+            Discover our delicious food menu, sheesha flavors, and exclusive dining deals. Click on any page to view in full screen.
           </p>
         </div>
 
@@ -56,7 +55,7 @@ export function MenuSection() {
               style={{ animationDelay: `${image.delay}ms` }}
               onClick={() => setSelectedImage(image.src)}
             >
-              <div className="relative w-full" style={{ paddingTop: '141.4%' /* A4/Menu aspect ratio approx */ }}>
+              <div className="relative w-full aspect-[1/1.414]">
                 <Image
                   src={image.src}
                   alt={`Basha Cafe Menu Page ${index + 1}`}
