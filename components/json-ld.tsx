@@ -14,7 +14,7 @@ export function JsonLd() {
           "Basha Rooftop Lounge",
           "Basha Hookah Cafe"
         ],
-        "description": "Basha Cafe is the top-rated rooftop restaurant and luxury sheesha cafe in E-11 Islamabad. Offering premium hookah flavors, gourmet Middle Eastern and continental cuisine, specialty coffee, and scenic Margalla skyline views until 4:00 AM.",
+        "description": "Basha Cafe is the top-rated rooftop restaurant, luxury sheesha cafe, and VIP event celebration destination in E-11 Islamabad. Offering bespoke birthday setups, crimson rose neon arches, premium hookah flavors, gourmet multi-cuisine dining, and scenic Margalla skyline views until 4:00 AM.",
         "url": "https://www.thebashacafe.com",
         "telephone": "+923244684895",
         "email": "khanhaziq508@gmail.com",
@@ -65,6 +65,11 @@ export function JsonLd() {
         "menu": "https://www.thebashacafe.com/#menu",
         "image": [
           "https://www.thebashacafe.com/images/hero-bg.jpg",
+          "https://www.thebashacafe.com/images/events/rooftop-floral-arch.jpg",
+          "https://www.thebashacafe.com/images/events/decorated-rooftop-swing.jpg",
+          "https://www.thebashacafe.com/images/events/pergola-cabana-setup.jpg",
+          "https://www.thebashacafe.com/images/events/vip-banquet-dining.jpg",
+          "https://www.thebashacafe.com/images/events/neon-rose-ring-setup.jpg",
           "https://www.thebashacafe.com/menu-1.jpg",
           "https://www.thebashacafe.com/menu-2.jpg",
           "https://www.thebashacafe.com/menu-3.jpg",
@@ -127,6 +132,21 @@ export function JsonLd() {
           },
           {
             "@type": "LocationFeatureSpecification",
+            "name": "Custom Birthday Party & VIP Event Setups",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Floral Rose Arches & Neon Sign Backdrops",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Private Indoor Velvet Banquet Hall",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
             "name": "Premium Sheesha & Hookah Lounge",
             "value": true
           },
@@ -139,16 +159,6 @@ export function JsonLd() {
             "@type": "LocationFeatureSpecification",
             "name": "Free High-Speed Wi-Fi",
             "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Private VIP Lounge & Birthday Celebrations",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Live Music & DJ Nights",
-            "value": true
           }
         ]
       },
@@ -158,7 +168,7 @@ export function JsonLd() {
         "url": "https://www.thebashacafe.com",
         "name": "The Basha Cafe Islamabad",
         "alternateName": "Basha Cafe Islamabad",
-        "description": "Official website of Basha Cafe: Top restaurant and sheesha lounge in Islamabad.",
+        "description": "Official website of Basha Cafe: Top restaurant, birthday celebration venue and sheesha lounge in Islamabad.",
         "publisher": {
           "@id": "https://www.thebashacafe.com/#restaurant"
         },
@@ -189,30 +199,36 @@ export function JsonLd() {
           {
             "@type": "ListItem",
             "position": 4,
+            "name": "Celebrations",
+            "item": "https://www.thebashacafe.com/#celebrations"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
             "name": "Gallery",
             "item": "https://www.thebashacafe.com/#gallery"
           },
           {
             "@type": "ListItem",
-            "position": 5,
+            "position": 6,
             "name": "Reviews",
             "item": "https://www.thebashacafe.com/#reviews"
           },
           {
             "@type": "ListItem",
-            "position": 6,
+            "position": 7,
             "name": "FAQ",
             "item": "https://www.thebashacafe.com/#faq"
           },
           {
             "@type": "ListItem",
-            "position": 7,
+            "position": 8,
             "name": "Reservations",
             "item": "https://www.thebashacafe.com/#reservations"
           },
           {
             "@type": "ListItem",
-            "position": 8,
+            "position": 9,
             "name": "Contact",
             "item": "https://www.thebashacafe.com/#contact"
           }

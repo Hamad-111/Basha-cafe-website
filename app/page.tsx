@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { MenuSection } from "@/components/menu-section"
+import { EventsShowcase } from "@/components/events-showcase"
 import { Gallery } from "@/components/gallery"
 import { Testimonials } from "@/components/testimonials"
 import { FaqSection } from "@/components/faq-section"
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <About />
         <MenuSection />
+        <EventsShowcase />
         <Gallery />
         <Testimonials />
         <FaqSection />

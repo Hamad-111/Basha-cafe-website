@@ -21,6 +21,7 @@ export function Navbar() {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#menu", label: "Menu" },
+    { href: "#celebrations", label: "Celebrations" },
     { href: "#gallery", label: "Gallery" },
     { href: "#reviews", label: "Reviews" },
     { href: "#faq", label: "FAQ" },
@@ -48,7 +49,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-7">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -86,7 +87,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
+          isMobileMenuOpen ? "max-h-[460px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-background/95 backdrop-blur-md border-t border-primary/20 px-6 py-6 space-y-3 mt-3 shadow-2xl">

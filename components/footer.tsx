@@ -10,6 +10,7 @@ export function Footer() {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Menu & Shisha", href: "#menu" },
+    { label: "VIP Celebrations", href: "#celebrations" },
     { label: "Gallery", href: "#gallery" },
     { label: "Reviews", href: "#reviews" },
     { label: "FAQ", href: "#faq" },
@@ -29,7 +30,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Islamabad&apos;s premier rooftop restaurant and luxury sheesha lounge. Indulge in world-class hookah flavors, artisanal cuisine, and vibrant late-night vibes.
+              Islamabad&apos;s premier rooftop restaurant and luxury sheesha lounge. Indulge in world-class hookah flavors, artisanal cuisine, bespoke birthday setups, and vibrant late-night vibes.
             </p>
             <div className="flex gap-4">
               <a
@@ -141,14 +142,14 @@ export function Footer() {
             &copy; {currentYear} Basha Cafe &amp; Restaurant. All rights reserved. Top Sheesha Cafe in Islamabad.
           </p>
           <div className="flex gap-6">
-            <Link href="#contact" className="hover:text-primary transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#contact" className="hover:text-primary transition-colors">
-              Terms &amp; Conditions
+            <Link href="#celebrations" className="hover:text-primary transition-colors">
+              Birthday Setups
             </Link>
             <Link href="#reservations" className="hover:text-primary transition-colors">
               Table Booking
+            </Link>
+            <Link href="#contact" className="hover:text-primary transition-colors">
+              Contact &amp; Location
             </Link>
           </div>
         </div>

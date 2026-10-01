@@ -2,16 +2,52 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { X, ZoomIn } from "lucide-react"
+import { X, ZoomIn, PartyPopper, Eye } from "lucide-react"
 
 interface GalleryItem {
   title: string
   alt: string
   src: string
-  category: string
+  category: "Celebrations" | "Views" | "Ambiance" | "Lounge"
+  badge?: string
 }
 
 const galleryItems: GalleryItem[] = [
+  {
+    title: "Rooftop Floral Red Rose Arch",
+    alt: "Basha Cafe rooftop circular crimson rose arch with glowing neon Happy Birthday sign in Islamabad",
+    src: "/images/events/rooftop-floral-arch.jpg",
+    category: "Celebrations",
+    badge: "New Setup",
+  },
+  {
+    title: "Decorated Rooftop Swing Bench",
+    alt: "Outdoor rooftop swing decorated with red and black balloons, rose vines, and neon birthday lights at Basha Cafe",
+    src: "/images/events/decorated-rooftop-swing.jpg",
+    category: "Celebrations",
+    badge: "Trending",
+  },
+  {
+    title: "Pergola Cabana & Rustic Table",
+    alt: "Private outdoor wooden pergola cabana with natural live-edge timber table and balloon wreath at Basha Cafe E-11",
+    src: "/images/events/pergola-cabana-setup.jpg",
+    category: "Celebrations",
+    badge: "VIP Setup",
+  },
+  {
+    title: "Luxury Indoor Banquet Dining",
+    alt: "Indoor VIP banquet dining table with deep red velvet cloth and ambient candle lamps at Basha Cafe Islamabad",
+    src: "/images/events/vip-banquet-dining.jpg",
+    category: "Celebrations",
+    badge: "Private Hall",
+  },
+  {
+    title: "Grand Rose Ring & Marquee Stage",
+    alt: "Grand circular rose backdrop with illuminated HBD marquee letters and golden pedestal cake stands at Basha Cafe",
+    src: "/images/events/neon-rose-ring-setup.jpg",
+    category: "Celebrations",
+    badge: "Showstopper",
+  },
   {
     title: "Rooftop Night Glow",
     alt: "Basha Cafe E-11 rooftop nighttime ambiance and glowing lounge lights in Islamabad",
@@ -22,13 +58,7 @@ const galleryItems: GalleryItem[] = [
     title: "Live Music Dining",
     alt: "Live acoustic musical performance and table dining at Basha Cafe Islamabad",
     src: "/images/memories/live-music-table.jpg",
-    category: "Vibes",
-  },
-  {
-    title: "Birthday & VIP Celebrations",
-    alt: "Luxury birthday party celebration setup with custom decor at Basha Cafe rooftop",
-    src: "/images/memories/birthday-setup.jpg",
-    category: "Celebrations",
+    category: "Lounge",
   },
   {
     title: "Celebration Delights",
@@ -46,19 +76,13 @@ const galleryItems: GalleryItem[] = [
     title: "Musical Nights & Vibes",
     alt: "Acoustic instruments and live musical performance setup at Basha Cafe lounge",
     src: "/images/memories/music-closeup.jpg",
-    category: "Vibes",
+    category: "Lounge",
   },
   {
     title: "Scenic Terrace Garden",
     alt: "Floral terrace garden outdoor seating area with Margalla hill breeze at Basha Cafe",
     src: "/images/memories/terrace-flowers.jpg",
     category: "Ambiance",
-  },
-  {
-    title: "Lounge Bar Culture",
-    alt: "Atmospheric themed lounge bar counter and mocktail station at Basha Cafe Islamabad",
-    src: "/images/memories/bar-masks.jpg",
-    category: "Lounge",
   },
   {
     title: "Margalla Tower Outlook",
@@ -70,25 +94,57 @@ const galleryItems: GalleryItem[] = [
 
 export function Gallery() {
   const [activeImage, setActiveImage] = useState<GalleryItem | null>(null)
+  const [filter, setFilter] = useState<string>("All")
+
+  const categories = [
+    { label: "All Visuals", value: "All" },
+    { label: "Celebrations & Birthdays", value: "Celebrations" },
+    { label: "Rooftop Views", value: "Views" },
+    { label: "Lounge & Ambiance", value: "Ambiance" },
+  ]
+
+  const filteredItems = filter === "All"
+    ? galleryItems
+    : filter === "Ambiance"
+    ? galleryItems.filter((i) => i.category === "Ambiance" || i.category === "Lounge")
+    : galleryItems.filter((i) => i.category === filter)
 
   return (
     <section id="gallery" className="py-24 bg-background relative overflow-hidden" aria-labelledby="gallery-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-primary text-sm font-bold tracking-[0.3em] uppercase">Visual Journey</span>
+        <div className="text-center mb-12">
+          <span className="text-primary text-sm font-bold tracking-[0.3em] uppercase">Visual Highlights</span>
           <h2 id="gallery-heading" className="text-4xl sm:text-5xl font-sans font-bold text-foreground mt-4 mb-6">
-            The Basha <span className="text-primary italic">Experience</span>
+            The Basha <span className="text-primary italic">Gallery</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg">
-            Immerse yourself in Islamabad&apos;s most vibrant rooftop moments. From sunset views over the Margalla hills to late-night shisha and live music.
+            A glimpse into the real rooftop moments, breathtaking views, and luxury birthday setups crafted at Basha Cafe, Islamabad.
           </p>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+          {categories.map((cat) => (
+            <button
+              key={cat.value}
+              type="button"
+              onClick={() => setFilter(cat.value)}
+              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 border ${
+                filter === cat.value
+                  ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20 scale-105"
+                  : "bg-card/70 text-muted-foreground border-primary/20 hover:border-primary/50 hover:text-foreground"
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryItems.map((item, index) => (
+          {filteredItems.map((item, index) => (
             <figure
               key={item.src}
               className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-card border border-primary/20 shadow-lg hover:border-primary/50 transition-all duration-500 cursor-pointer"
@@ -100,15 +156,22 @@ export function Gallery() {
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
-                loading={index < 3 ? "eager" : "lazy"}
+                loading={index < 4 ? "eager" : "lazy"}
               />
 
-              {/* Gradient Shade */}
+              {/* Gradient Scrim */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
 
+              {/* Badge if available */}
+              {item.badge && (
+                <div className="absolute top-4 left-4 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
+                  {item.badge}
+                </div>
+              )}
+
               {/* Hover Zoom Icon */}
-              <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/70 backdrop-blur-sm border border-primary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75 text-primary">
-                <ZoomIn className="w-5 h-5" />
+              <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-background/80 backdrop-blur-sm border border-primary/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75 text-primary">
+                <ZoomIn className="w-4 h-4" />
               </div>
 
               {/* Overlay Caption */}
@@ -143,7 +206,7 @@ export function Gallery() {
           </button>
 
           <div
-            className="relative w-full max-w-5xl max-h-[85vh] aspect-[16/10] overflow-hidden rounded-2xl border border-primary/30 shadow-2xl"
+            className="relative w-full max-w-4xl max-h-[85vh] aspect-[3/4] sm:aspect-[4/3] overflow-hidden rounded-2xl border border-primary/30 shadow-2xl bg-black"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -154,9 +217,9 @@ export function Gallery() {
               sizes="100vw"
               priority
             />
-            <div className="absolute bottom-0 inset-x-0 bg-background/80 backdrop-blur-sm p-4 text-center border-t border-primary/20">
-              <p className="text-foreground font-medium text-lg">{activeImage.title}</p>
-              <p className="text-muted-foreground text-sm">{activeImage.alt}</p>
+            <div className="absolute bottom-0 inset-x-0 bg-background/90 backdrop-blur-md p-4 text-center border-t border-primary/20">
+              <p className="text-foreground font-medium text-lg font-serif">{activeImage.title}</p>
+              <p className="text-muted-foreground text-xs sm:text-sm">{activeImage.alt}</p>
             </div>
           </div>
         </div>
