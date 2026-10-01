@@ -120,7 +120,7 @@ export function Gallery() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg">
-            A glimpse into the real rooftop moments, breathtaking views, and luxury birthday setups crafted at Basha Cafe, Islamabad.
+            A glimpse into the real rooftop moments, breathtaking Margalla views, and viral birthday setups crafted at <strong className="text-foreground font-semibold">The Basha Cafe</strong>, Islamabad&apos;s #1 trending cafe.
           </p>
         </div>
 

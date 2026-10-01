@@ -5,16 +5,19 @@ export function JsonLd() {
       {
         "@type": ["Restaurant", "CafeOrCoffeeShop"],
         "@id": "https://www.thebashacafe.com/#restaurant",
-        "name": "Basha Cafe",
+        "name": "The Basha Cafe",
         "alternateName": [
-          "The Basha Cafe",
-          "Basha Cafe Islamabad",
+          "Basha Cafe",
           "The Basha Cafe Islamabad",
+          "Basha Cafe Islamabad",
+          "The Basha Cafe Rooftop Lounge",
           "Basha Sheesha Cafe",
-          "Basha Rooftop Lounge",
-          "Basha Hookah Cafe"
+          "Trending Cafe Islamabad",
+          "Top Trending Cafe Islamabad",
+          "Basha Cafe E-11",
+          "Basha Hookah Lounge"
         ],
-        "description": "Basha Cafe is the top-rated rooftop restaurant, luxury sheesha cafe, and VIP event celebration destination in E-11 Islamabad. Offering bespoke birthday setups, crimson rose neon arches, premium hookah flavors, gourmet multi-cuisine dining, and scenic Margalla skyline views until 4:00 AM.",
+        "description": "The Basha Cafe is Islamabad's #1 trending rooftop cafe, restaurant, and luxury sheesha lounge in E-11. Featuring panoramic Margalla views, viral birthday celebration setups with rose arches, premium Russian hookah blends, gourmet multi-cuisine dining, and late-night hours until 4:00 AM.",
         "url": "https://www.thebashacafe.com",
         "telephone": "+923244684895",
         "email": "khanhaziq508@gmail.com",
@@ -166,9 +169,13 @@ export function JsonLd() {
         "@type": "WebSite",
         "@id": "https://www.thebashacafe.com/#website",
         "url": "https://www.thebashacafe.com",
-        "name": "The Basha Cafe Islamabad",
-        "alternateName": "Basha Cafe Islamabad",
-        "description": "Official website of Basha Cafe: Top restaurant, birthday celebration venue and sheesha lounge in Islamabad.",
+        "name": "The Basha Cafe",
+        "alternateName": [
+          "Basha Cafe",
+          "The Basha Cafe Islamabad",
+          "Basha Cafe Islamabad"
+        ],
+        "description": "Official website of The Basha Cafe: #1 Trending rooftop cafe, birthday celebration venue and luxury sheesha lounge in Islamabad.",
         "publisher": {
           "@id": "https://www.thebashacafe.com/#restaurant"
         },
@@ -240,39 +247,47 @@ export function JsonLd() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What are the opening hours of Basha Cafe in Islamabad?",
+            "name": "Why is The Basha Cafe known as the #1 trending cafe in Islamabad?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Basha Cafe is open 7 days a week, Monday through Sunday, from 12:00 PM (noon) until 4:00 AM (late night), making it the premier spot for both afternoon dining and late-night sheesha lounge sessions in Islamabad."
+              "text": "The Basha Cafe has become Islamabad's top trending cafe and rooftop destination thanks to our cinematic Margalla mountain views, viral birthday celebration decor with crimson rose arches, authentic Russian craft hookah blends, and vibrant late-night lounge atmosphere open every single day until 4:00 AM."
             }
           },
           {
             "@type": "Question",
-            "name": "Where is Basha Cafe located?",
+            "name": "What are the opening hours of The Basha Cafe in Islamabad?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Basha Cafe is located on the Rooftop of Casa Bella Hotel in E-11, Islamabad. It offers spectacular panoramic views of the city skyline and the Margalla hills in an open-air and indoor luxury lounge setting."
+              "text": "The Basha Cafe is open 7 days a week, Monday through Sunday, from 12:00 PM (noon) until 4:00 AM (late night), making it the premier spot for afternoon dining, sunset coffee, and late-night sheesha lounge sessions in Islamabad."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Basha Cafe considered the best sheesha cafe in Islamabad?",
+            "name": "Where is The Basha Cafe located?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, Basha Cafe is widely celebrated as one of Islamabad's top sheesha cafes, offering an extensive selection of premium imported hookah flavors, smooth Russian pipes, expert preparation, and a refined luxury lounge atmosphere."
+              "text": "The Basha Cafe is located on the Rooftop of Casa Bella Hotel in E-11, Islamabad. It offers spectacular panoramic views of the city skyline and the Margalla hills in an open-air and indoor luxury lounge setting."
             }
           },
           {
             "@type": "Question",
-            "name": "Can I book Basha Cafe for birthdays, anniversaries, and private events?",
+            "name": "Why is The Basha Cafe rated among the best sheesha cafes in Islamabad?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Absolutely! Basha Cafe offers VIP lounge bookings and customized event setups for birthdays, anniversaries, corporate dinners, and celebrations, complete with specialized decor, customized cakes, and tailored dining platters."
+              "text": "The Basha Cafe is celebrated for delivering Islamabad's finest hookah experience. We utilize authentic premium Russian pipes, top-grade natural coconut coals, and an extensive collection of 50+ world-class shisha flavors curated by master shisha artisans for clean, smooth, long-lasting sessions."
             }
           },
           {
             "@type": "Question",
-            "name": "What food and beverages does Basha Cafe offer?",
+            "name": "Can I book The Basha Cafe for birthdays, anniversaries, and private events?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! The Basha Cafe is Islamabad's favorite venue for milestone celebrations. We offer exclusive VIP lounge areas, custom floral rose arches, neon sign backdrops, celebration cakes, fairy light ambiance, and personalized food platters."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What food and beverages does The Basha Cafe offer?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Our gourmet menu features Middle Eastern specialties, continental platters, premium steaks, juicy burgers, crispy appetizers, artisanal coffees, signature mocktails, and decadent desserts like molten lava cake and Lotus cheesecake."
@@ -280,7 +295,7 @@ export function JsonLd() {
           },
           {
             "@type": "Question",
-            "name": "How do I make a reservation at Basha Cafe?",
+            "name": "How do I make a reservation at The Basha Cafe?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "You can make an instant table reservation online using the reservation form on our website, or call/WhatsApp us directly at +92 324 4684895."

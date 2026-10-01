@@ -26,11 +26,11 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block p-3 mb-6 rounded-full border border-primary/20 bg-card">
               <span className="text-primary font-serif font-bold text-xl tracking-tighter italic">
-                Basha <span className="text-foreground">Cafe</span>
+                The Basha <span className="text-foreground">Cafe</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Islamabad&apos;s premier rooftop restaurant and luxury sheesha lounge. Indulge in world-class hookah flavors, artisanal cuisine, bespoke birthday setups, and vibrant late-night vibes.
+              Islamabad&apos;s #1 trending rooftop cafe, restaurant, and luxury sheesha lounge in E-11. Indulge in world-class hookah flavors, artisanal cuisine, viral celebration setups, and late-night vibes until 4:00 AM.
             </p>
             <div className="flex gap-4">
               <a

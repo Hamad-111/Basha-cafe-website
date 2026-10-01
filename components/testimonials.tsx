@@ -50,7 +50,7 @@ export function Testimonials() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg">
-            Read authentic reviews from guests who love Basha Cafe for our rooftop ambiance, gourmet dining, and top sheesha experience in Islamabad.
+            Read authentic reviews from guests who love <strong className="text-foreground font-semibold">The Basha Cafe</strong> for our trending rooftop ambiance, gourmet dining, and top sheesha experience in Islamabad.
           </p>
         </div>
 
@@ -89,7 +89,9 @@ export function Testimonials() {
                 <div>
                   <div className="flex items-center gap-1.5">
                     <span className="text-foreground font-semibold text-sm">{testimonial.name}</span>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-primary" title="Verified Guest" />
+                    <span title="Verified Guest" className="inline-flex items-center">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-primary" aria-label="Verified Guest" />
+                    </span>
                   </div>
                   <span className="text-xs text-muted-foreground">{testimonial.location}</span>
                 </div>

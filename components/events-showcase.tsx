@@ -84,7 +84,7 @@ export function EventsShowcase() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-background/80 backdrop-blur-sm mb-4">
             <PartyPopper className="w-4 h-4 text-primary" />
             <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">
-              Islamabad&apos;s Premier Event Destination
+              #1 Trending Celebration &amp; Rooftop Cafe in Islamabad
             </span>
           </div>
 
@@ -94,7 +94,7 @@ export function EventsShowcase() {
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
 
           <p className="text-lg text-muted-foreground font-sans max-w-3xl mx-auto leading-relaxed">
-            Make your special day truly unforgettable at Basha Cafe. From glowing rooftop neon arches to private candlelit velvet banquet halls, explore our real celebration setups tailored to perfection.
+            Make your special day viral and unforgettable at <strong className="text-foreground font-semibold">The Basha Cafe</strong>. From glowing rooftop rose neon arches to private candlelit velvet banquet halls, explore our real celebration setups tailored to perfection.
           </p>
         </div>
 

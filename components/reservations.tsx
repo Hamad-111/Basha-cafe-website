@@ -45,7 +45,7 @@ export function Reservations() {
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mb-8" />
 
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Secure your prime table at Basha Cafe, Islamabad&apos;s favorite rooftop destination. Whether it&apos;s an intimate dinner, birthday celebration, or a relaxing sheesha night under the Margalla sky, we are ready to welcome you with five-star hospitality.
+              Secure your prime table at <strong className="text-foreground font-semibold">The Basha Cafe</strong>, Islamabad&apos;s #1 trending rooftop destination. Whether it&apos;s an intimate dinner, viral birthday celebration, or a relaxing sheesha night under the Margalla sky, we are ready to welcome you with five-star hospitality.
             </p>
 
             {/* Info Cards */}

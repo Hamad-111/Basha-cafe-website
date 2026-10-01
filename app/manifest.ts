@@ -2,9 +2,9 @@ import { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Basha Cafe | Best Restaurant & Sheesha Cafe in Islamabad",
-    short_name: "Basha Cafe",
-    description: "Top-rated rooftop restaurant and luxury sheesha lounge in E-11, Islamabad. Open daily 12 PM - 4 AM.",
+    name: "The Basha Cafe | #1 Trending Cafe & Sheesha Lounge in Islamabad",
+    short_name: "The Basha Cafe",
+    description: "Islamabad's #1 trending rooftop cafe, restaurant and luxury sheesha lounge in E-11. Open daily 12 PM - 4 AM.",
     start_url: "/",
     display: "standalone",
     background_color: "#141517",

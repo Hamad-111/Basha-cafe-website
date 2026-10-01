@@ -29,38 +29,43 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thebashacafe.com"),
   title: {
-    default: "Basha Cafe | Best Restaurant & Sheesha Cafe in Islamabad (Rooftop Lounge)",
-    template: "%s | Basha Cafe Islamabad",
+    default: "The Basha Cafe | #1 Trending Cafe, Restaurant & Sheesha Lounge in Islamabad",
+    template: "%s | The Basha Cafe Islamabad",
   },
   description:
-    "Experience Basha Cafe in E-11 Islamabad: the premier rooftop restaurant & luxury sheesha lounge. Gourmet dining, exclusive hookah flavors, scenic Margalla views & late-night vibes until 4 AM. Book now!",
+    "The Basha Cafe is Islamabad's #1 trending rooftop cafe, restaurant & luxury sheesha lounge in E-11. Discover gourmet dining, viral birthday setups, premium Russian hookah, Margalla views & late-night vibes until 4 AM.",
   keywords: [
-    "basha cafe",
     "the basha cafe",
-    "basha cafe islamabad",
+    "basha cafe",
     "the basha cafe islamabad",
+    "basha cafe islamabad",
+    "trending cafe in islamabad",
+    "top trending cafe islamabad",
+    "best cafe in islamabad",
     "best sheesha cafe in islamabad",
-    "top restaurant in islamabad",
+    "top sheesha cafe in islamabad",
     "sheesha cafe in islamabad",
-    "hookah lounge islamabad",
     "rooftop cafe islamabad",
-    "e11 rooftop cafe islamabad",
+    "e11 rooftop cafe",
     "e-11 cafe islamabad",
-    "casa bella hotel rooftop",
+    "hookah lounge islamabad",
     "late night cafe islamabad",
+    "aesthetic cafe in islamabad",
     "best cafe in islamabad for couples",
+    "birthday celebration cafe islamabad",
+    "casa bella hotel rooftop",
+    "top restaurant in islamabad",
+    "russian sheesha islamabad",
     "shisha lounge near me",
     "best shisha in town",
-    "top sheesha cafe",
     "basha cafe menu",
-    "birthday celebration cafe islamabad",
-    "russian sheesha islamabad",
     "cafe near me",
+    "islamabad nightlife cafes",
     "middle eastern food islamabad",
   ],
   authors: [{ name: "Haziq Khan", url: "https://www.thebashacafe.com" }],
-  creator: "Basha Cafe",
-  publisher: "Basha Cafe",
+  creator: "The Basha Cafe",
+  publisher: "The Basha Cafe",
   formatDetection: {
     email: false,
     address: false,
@@ -75,17 +80,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Basha Cafe | Best Restaurant & Sheesha Cafe in Islamabad",
+    title: "The Basha Cafe | #1 Trending Cafe, Restaurant & Sheesha Lounge in Islamabad",
     description:
-      "Islamabad's premier rooftop restaurant and luxury sheesha lounge in E-11. Savor gourmet dining, world-class hookah flavors, and breathtaking Margalla skyline views until 4 AM.",
+      "Islamabad's #1 trending rooftop destination in E-11. Gourmet multi-cuisine dining, signature Russian hookah, VIP birthday setups, and panoramic Margalla views until 4 AM.",
     url: "https://www.thebashacafe.com",
-    siteName: "Basha Cafe",
+    siteName: "The Basha Cafe",
     images: [
       {
         url: "/images/hero-bg.jpg",
         width: 1200,
         height: 630,
-        alt: "Basha Cafe Rooftop Lounge and Restaurant in Islamabad",
+        alt: "The Basha Cafe Rooftop Lounge and Restaurant in Islamabad",
       },
     ],
     locale: "en_PK",
@@ -93,9 +98,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Basha Cafe | Best Restaurant & Sheesha Cafe in Islamabad",
+    title: "The Basha Cafe | #1 Trending Cafe, Restaurant & Sheesha Lounge in Islamabad",
     description:
-      "Islamabad's premier rooftop restaurant and luxury sheesha lounge in E-11. Gourmet food, top hookah flavors & late night vibes.",
+      "Islamabad's #1 trending rooftop destination in E-11. Gourmet dining, top hookah flavors & late-night vibes until 4 AM.",
     images: ["/images/hero-bg.jpg"],
   },
   robots: {
@@ -120,7 +125,7 @@ export const metadata: Metadata = {
   verification: {
     google: "googleab0248803456ad93",
   },
-  category: "Restaurant & Cafe",
+  category: "Trending Cafe & Restaurant",
 }
 
 export default function RootLayout({

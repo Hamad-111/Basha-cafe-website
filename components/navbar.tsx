@@ -40,10 +40,10 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2" aria-label="Basha Cafe Home">
+          <Link href="/" className="flex items-center gap-2" aria-label="The Basha Cafe - #1 Trending Cafe in Islamabad">
             <div className="flex items-center justify-center px-4 py-1.5 rounded-full border border-primary/30 shadow-md bg-card/90">
               <span className="text-primary font-serif font-bold text-xl md:text-2xl tracking-tighter italic">
-                Basha <span className="text-foreground">Cafe</span>
+                The Basha <span className="text-foreground">Cafe</span>
               </span>
             </div>
           </Link>

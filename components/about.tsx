@@ -16,8 +16,8 @@ const features = [
   },
   {
     icon: Sofa,
-    title: "Luxury Rooftop Ambiance",
-    description: "Perched atop Casa Bella Hotel in E-11, Islamabad with Margalla hill breezes, panoramic city nightscapes, and chic velvet lounge seating.",
+    title: "#1 Trending Rooftop Cafe",
+    description: "Islamabad's most trending and viral rooftop cafe. Perched atop Casa Bella Hotel in E-11 with Margalla hill breezes, panoramic city nightscapes, and chic velvet lounge seating.",
   },
   {
     icon: Star,
@@ -47,7 +47,7 @@ export function About() {
         <div className="text-center mb-16">
           <span className="text-primary text-sm tracking-[0.3em] uppercase font-bold">Our Heritage &amp; Vision</span>
           <h2 id="about-heading" className="text-4xl sm:text-5xl font-sans font-bold text-foreground mt-4 mb-6">
-            About <span className="text-primary italic">Basha Cafe</span>
+            About <span className="text-primary italic">The Basha Cafe</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
         </div>
@@ -56,10 +56,10 @@ export function About() {
           {/* Content */}
           <div className="space-y-6">
             <p className="text-2xl text-foreground font-sans font-light leading-relaxed max-w-3xl mx-auto">
-              Welcome to <strong className="font-semibold text-primary">Basha Cafe</strong>, Islamabad&apos;s leading rooftop restaurant and premier sheesha lounge.
+              Welcome to <strong className="font-semibold text-primary">The Basha Cafe</strong>, Islamabad&apos;s #1 trending rooftop cafe, gourmet restaurant, and premier sheesha lounge.
             </p>
             <p className="text-lg text-muted-foreground font-sans leading-relaxed max-w-3xl mx-auto">
-              Situated in the bustling heart of E-11 Islamabad, Basha Cafe was founded to redefine the city&apos;s cafe culture. We bring together world-class hookah flavors, artisanal coffee, gourmet cuisine, and live entertainment in an atmospheric setting overlooking the Margalla Hills. Whether you are searching for the best sheesha in Islamabad or looking to celebrate a birthday under starry skies, Basha Cafe delivers an unforgettable experience.
+              Perched atop Casa Bella Hotel in E-11 Islamabad, <strong className="text-foreground font-medium">The Basha Cafe</strong> is the capital&apos;s most viral and trending hangout destination. Known for mesmerizing Margalla mountain sunsets, bespoke crimson rose birthday setups, authentic Russian hookah blends, and artisanal multi-cuisine dining, we provide an electric late-night sanctuary open every day until 4:00 AM.
             </p>
           </div>
 
