@@ -1,33 +1,43 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react"
 
 export function Footer() {
+  const currentYear = new Date().getFullYear()
+
+  const quickLinks = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Menu & Shisha", href: "#menu" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Reviews", href: "#reviews" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Reservations", href: "#reservations" },
+  ]
+
   return (
-    <footer id="contact" className="bg-background border-t border-primary/20">
+    <footer id="contact" className="bg-background border-t border-primary/20" aria-label="Site Footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="inline-block p-4 mb-6 rounded-full border border-primary/20 bg-card">
+            <Link href="/" className="inline-block p-3 mb-6 rounded-full border border-primary/20 bg-card">
               <span className="text-primary font-serif font-bold text-xl tracking-tighter italic">
                 Basha <span className="text-foreground">Cafe</span>
               </span>
-            </div>
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Where flavor meets the lounge experience. Premium hookah, exquisite cuisine,
-              and an atmosphere designed for unforgettable moments.
+              Islamabad&apos;s premier rooftop restaurant and luxury sheesha lounge. Indulge in world-class hookah flavors, artisanal cuisine, and vibrant late-night vibes.
             </p>
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/thebashacafe?igsh=eHU3bjV2bzE3aHJq&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary/70 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                aria-label="Instagram"
+                className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary/80 hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm"
+                aria-label="Follow Basha Cafe on Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
@@ -35,8 +45,8 @@ export function Footer() {
                 href="https://www.facebook.com/share/177v9Q2DKr/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary/70 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                aria-label="Facebook"
+                className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary/80 hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm"
+                aria-label="Follow Basha Cafe on Facebook"
               >
                 <Facebook className="w-4 h-4" />
               </a>
@@ -44,13 +54,14 @@ export function Footer() {
                 href="https://www.tiktok.com/@bashacafeww?_r=1&_t=ZS-93NxPf4cl2f"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary/70 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                aria-label="TikTok"
+                className="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary/80 hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-sm"
+                aria-label="Follow Basha Cafe on TikTok"
               >
                 <svg
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   className="w-4 h-4"
+                  aria-hidden="true"
                 >
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
                 </svg>
@@ -59,74 +70,85 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-foreground font-medium mb-6 tracking-wider uppercase text-sm">Quick Links</h3>
+          <nav aria-label="Footer Quick Links">
+            <h3 className="text-foreground font-semibold mb-6 tracking-wider uppercase text-sm">Explore</h3>
             <ul className="space-y-3">
-              {["Home", "About", "Menu", "Gallery", "Reservations"].map((item) => (
-                <li key={item}>
+              {quickLinks.map((item) => (
+                <li key={item.label}>
                   <Link
-                    href={`#${item.toLowerCase()}`}
+                    href={item.href}
                     className="text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Contact Info */}
+          {/* Contact Info with Schema Semantic markup */}
           <div>
-            <h3 className="text-foreground font-medium mb-6 tracking-wider uppercase text-sm">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
+            <h3 className="text-foreground font-semibold mb-6 tracking-wider uppercase text-sm">Location &amp; Contact</h3>
+            <address className="not-italic space-y-4">
+              <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-muted-foreground text-sm">
-                  Roof Top Casa Bella Hotel<br />
-                  E-11, Islamabad
+                <span className="text-muted-foreground text-sm leading-relaxed">
+                  Rooftop Casa Bella Hotel,<br />
+                  Main Margalla Rd, E-11/4,<br />
+                  Islamabad, Pakistan
                 </span>
-              </li>
-              <li className="flex items-center gap-3">
+              </div>
+              <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:03244684895" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-                  0324 4684895
+                <a
+                  href="tel:+923244684895"
+                  className="text-muted-foreground hover:text-primary text-sm transition-colors font-medium"
+                >
+                  +92 324 4684895
                 </a>
-              </li>
-              <li className="flex items-center gap-3">
+              </div>
+              <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:khanhaziq508@gmail.com" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                <a
+                  href="mailto:khanhaziq508@gmail.com"
+                  className="text-muted-foreground hover:text-primary text-sm transition-colors"
+                >
                   khanhaziq508@gmail.com
                 </a>
-              </li>
-            </ul>
+              </div>
+            </address>
           </div>
 
           {/* Hours */}
           <div>
-            <h3 className="text-foreground font-medium mb-6 tracking-wider uppercase text-sm">Opening Hours</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
+            <h3 className="text-foreground font-semibold mb-6 tracking-wider uppercase text-sm">Operating Hours</h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3 p-4 bg-card/60 border border-primary/20 rounded-xl">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div className="text-muted-foreground text-sm">
-                  <p className="font-medium text-foreground/80">Monday - Sunday</p>
-                  <p>12:00 PM - 4:00 AM</p>
+                  <p className="font-semibold text-foreground">Monday – Sunday</p>
+                  <p className="text-primary font-medium">12:00 PM – 4:00 AM</p>
+                  <p className="text-xs text-muted-foreground mt-1">Open late night 7 days a week</p>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-primary/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Basha Cafe & Restaurant. All rights reserved.
+        <div className="py-6 border-t border-primary/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
+          <p>
+            &copy; {currentYear} Basha Cafe &amp; Restaurant. All rights reserved. Top Sheesha Cafe in Islamabad.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link href="#contact" className="hover:text-primary transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-              Terms of Service
+            <Link href="#contact" className="hover:text-primary transition-colors">
+              Terms &amp; Conditions
+            </Link>
+            <Link href="#reservations" className="hover:text-primary transition-colors">
+              Table Booking
             </Link>
           </div>
         </div>

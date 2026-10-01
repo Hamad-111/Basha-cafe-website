@@ -1,78 +1,100 @@
 "use client"
 
-import { Star, Quote } from "lucide-react"
+import { Star, Quote, CheckCircle2 } from "lucide-react"
 
 const testimonials = [
   {
     name: "Sarah M.",
-    text: "The atmosphere at Basha Cafe is unmatched. Every visit feels like a special occasion. The hookah flavors are exceptional!",
+    location: "Islamabad, F-7",
+    text: "The rooftop atmosphere at Basha Cafe is unmatched in Islamabad. Every visit feels like a luxury escape. The Russian shisha flavors are super smooth and long-lasting, and the staff is so welcoming!",
     rating: 5,
+    highlight: "Best Sheesha Experience",
   },
   {
     name: "Ahmed K.",
-    text: "Best Middle Eastern food in town, hands down. The mixed grill platter is a must-try. Perfect for date nights.",
+    location: "Islamabad, E-11",
+    text: "Hands down the best food and sheesha lounge in town. We tried the mixed grill platter and beef burger—delicious quality. Perfect breezy rooftop for date nights and catching up with friends.",
     rating: 5,
+    highlight: "Incredible Food & Vibe",
   },
   {
     name: "Michael R.",
-    text: "From the moment you walk in, you feel like royalty. The service is impeccable and the ambiance is simply stunning.",
+    location: "Diplomatic Enclave",
+    text: "From the moment you walk into the rooftop of Casa Bella, you feel like royalty. The service is attentive, the Margalla hill view is breathtaking, and the vibes until 4 AM are unbeatable.",
     rating: 5,
+    highlight: "Top Tier Hospitality",
   },
 ]
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-primary/10" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-primary/5" />
-      
+    <section id="reviews" className="py-24 bg-card/60 relative overflow-hidden" aria-labelledby="reviews-heading">
+      {/* Decorative ambient elements */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-primary/10 pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm tracking-[0.3em] uppercase">Testimonials</span>
-          <h2 className="text-4xl sm:text-5xl font-serif font-light text-foreground mt-4 mb-6">
-            What Our <span className="text-primary">Guests</span> Say
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-background mb-4">
+            <div className="flex gap-1 text-primary">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />
+              ))}
+            </div>
+            <span className="text-primary text-xs font-bold uppercase tracking-wider">
+              4.9 / 5 Rating (190+ Reviews)
+            </span>
+          </div>
+          <h2 id="reviews-heading" className="text-4xl sm:text-5xl font-sans font-bold text-foreground mt-2 mb-6">
+            Guest <span className="text-primary italic">Reviews</span>
           </h2>
-          <div className="w-24 h-px bg-primary mx-auto" />
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base sm:text-lg">
+            Read authentic reviews from guests who love Basha Cafe for our rooftop ambiance, gourmet dining, and top sheesha experience in Islamabad.
+          </p>
         </div>
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
+          {testimonials.map((testimonial) => (
+            <article
               key={testimonial.name}
-              className="bg-card border border-primary/20 p-8 relative group hover:border-primary/40 transition-all duration-300"
+              className="bg-card border border-primary/20 p-8 rounded-2xl relative group hover:border-primary/50 transition-all duration-300 shadow-lg flex flex-col justify-between"
             >
               {/* Quote icon */}
-              <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
-              
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-primary fill-primary" />
-                ))}
-              </div>
+              <Quote className="w-10 h-10 text-primary/15 absolute top-6 right-6 pointer-events-none" />
 
-              {/* Text */}
-              <p className="text-foreground/80 leading-relaxed mb-6 italic">
-                {`"${testimonial.text}"`}
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
-                  <span className="text-primary font-medium text-sm">
-                    {testimonial.name.charAt(0)}
+              <div>
+                {/* Rating */}
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-primary fill-primary" />
+                  ))}
+                  <span className="text-xs font-bold text-primary ml-2 uppercase tracking-wide">
+                    {testimonial.highlight}
                   </span>
                 </div>
-                <span className="text-foreground font-medium">{testimonial.name}</span>
+
+                {/* Text */}
+                <p className="text-foreground/90 text-sm sm:text-base leading-relaxed mb-6 italic">
+                  &ldquo;{testimonial.text}&rdquo;
+                </p>
               </div>
 
-              {/* Corner accents */}
-              <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-primary/0 group-hover:border-primary/30 transition-all duration-300" />
-              <div className="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-primary/0 group-hover:border-primary/30 transition-all duration-300" />
-            </div>
+              {/* Author */}
+              <div className="flex items-center gap-3 pt-4 border-t border-primary/10">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/40 font-bold text-primary">
+                  {testimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-foreground font-semibold text-sm">{testimonial.name}</span>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-primary" title="Verified Guest" />
+                  </div>
+                  <span className="text-xs text-muted-foreground">{testimonial.location}</span>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>

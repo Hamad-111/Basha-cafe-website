@@ -1,15 +1,15 @@
 import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://www.bashacafe.com"
+  const baseUrl = "https://www.thebashacafe.com"
+  const now = new Date()
 
-    return [
-        {
-            url: baseUrl,
-            lastModified: new Date(),
-            changeFrequency: "weekly",
-            priority: 1,
-        },
-        // Add more URLs here as you add more pages to your website
-    ]
+  return [
+    {
+      url: baseUrl,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 1.0,
+    },
+  ]
 }

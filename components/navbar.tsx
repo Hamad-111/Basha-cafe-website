@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -12,7 +11,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 40)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -23,21 +22,25 @@ export function Navbar() {
     { href: "#about", label: "About" },
     { href: "#menu", label: "Menu" },
     { href: "#gallery", label: "Gallery" },
+    { href: "#reviews", label: "Reviews" },
+    { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ]
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? "bg-background/95 backdrop-blur-md border-b border-primary/20"
-        : "bg-transparent"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md border-b border-primary/20 shadow-lg py-3"
+          : "bg-transparent py-5"
+      }`}
+      aria-label="Main Navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="flex items-center justify-center p-2 rounded-full border-2 border-primary/20 translate-y-2 md:translate-y-6 shadow-xl bg-background">
+          <Link href="/" className="flex items-center gap-2" aria-label="Basha Cafe Home">
+            <div className="flex items-center justify-center px-4 py-1.5 rounded-full border border-primary/30 shadow-md bg-card/90">
               <span className="text-primary font-serif font-bold text-xl md:text-2xl tracking-tighter italic">
                 Basha <span className="text-foreground">Cafe</span>
               </span>
@@ -45,12 +48,12 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 text-sm tracking-wider uppercase font-medium"
+                className="text-foreground/80 hover:text-primary transition-colors duration-200 text-xs tracking-widest uppercase font-semibold"
               >
                 {link.label}
               </Link>
@@ -58,38 +61,40 @@ export function Navbar() {
           </div>
 
           {/* Book Table Button */}
-          <div className="hidden md:block">
+          <div className="hidden sm:block">
             <Button
               asChild
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 text-sm tracking-wider uppercase font-medium"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2 text-xs tracking-wider uppercase font-semibold shadow-md shadow-primary/20"
             >
-              <Link href="#reservations">Book a Table</Link>
+              <Link href="#reservations" id="nav-book-table-btn">Book a Table</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden text-foreground p-2"
+            className="lg:hidden text-foreground p-2 rounded-lg border border-primary/20 hover:border-primary/50"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
+        className={`lg:hidden transition-all duration-300 overflow-hidden ${
+          isMobileMenuOpen ? "max-h-[420px] opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
-        <div className="bg-background/95 backdrop-blur-md border-t border-primary/20 px-4 py-6 space-y-4">
+        <div className="bg-background/95 backdrop-blur-md border-t border-primary/20 px-6 py-6 space-y-3 mt-3 shadow-2xl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="block text-foreground/80 hover:text-primary transition-colors duration-300 text-sm tracking-wider uppercase font-medium py-2"
+              className="block text-foreground/80 hover:text-primary transition-colors text-sm tracking-wider uppercase font-medium py-1.5"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
@@ -97,7 +102,7 @@ export function Navbar() {
           ))}
           <Button
             asChild
-            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-4"
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 mt-4 py-5"
           >
             <Link href="#reservations" onClick={() => setIsMobileMenuOpen(false)}>
               Book a Table
