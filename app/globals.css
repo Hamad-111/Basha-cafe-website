@@ -120,23 +120,4 @@
     background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0);
     background-size: 40px 40px;
   }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .animate-marquee {
-    display: flex;
-    width: max-content;
-    animation: marquee 22s linear infinite;
-  }
-
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
 }
