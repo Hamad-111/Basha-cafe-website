@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { MovingBanner } from "@/components/moving-banner"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -29,14 +30,16 @@ export function Navbar() {
   ]
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-primary/20 shadow-lg py-3"
-          : "bg-transparent py-5"
-      }`}
-      aria-label="Main Navigation"
-    >
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <MovingBanner text="HI AREEB" />
+      <nav
+        className={`transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/95 backdrop-blur-md border-b border-primary/20 shadow-lg py-3"
+            : "bg-background/40 backdrop-blur-sm py-4"
+        }`}
+        aria-label="Main Navigation"
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -112,5 +115,6 @@ export function Navbar() {
         </div>
       </div>
     </nav>
+    </header>
   )
 }
