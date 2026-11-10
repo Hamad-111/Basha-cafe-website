@@ -22,7 +22,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-36 sm:pt-44 md:pt-48 pb-20">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-28 pb-20">
         <div className="space-y-6 max-w-4xl mx-auto">
           {/* Eyebrow badge */}
           <div className="overflow-hidden">
